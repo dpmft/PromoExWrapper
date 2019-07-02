@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.marathe</groupId>
+	<artifactId>promoServiceWrapper</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0</version>
+
+	<profiles>
+		<profile>
+			<id>wrap</id>
+			<properties>
+				<maven.test.skip>true</maven.test.skip>				
+			</properties>
+			
+			<modules>
+				<module>..\..\zzz\coles_wip\promos</module>
+				<module>..\promoServiceEar</module>
+			</modules>
+		</profile>
+	</profiles>
+</project>
